@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: arial helvetica sans-serif;
 }
-
 
 /* =============== MAIN HEADER =============== */
 header{
@@ -51,11 +51,26 @@ header .nav-link{
 }
 
 
+/* =============GENERAL TOP-CARDS ============ */
+.top-cards{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.card a{
+    padding: 50px 20px;
+    margin: 10px;
+    border: 1px solid #555;
+}
+
+
+/* ============= LATERAL NAV-BAR =============*/
 .lateral-nav{
     position: fixed;
     right: 10px;
     top: 40%;
     transform: transheight(-40%);
+    outline: none;
     
 }
 .lateral-list{
@@ -66,30 +81,54 @@ header .nav-link{
     border-radius: 15px;
     margin-top: 10px;
     list-style: none;
+    outline: none;
 }
-
+.lateral-list a{
+    position: absolute;
+    margin-left: 1px;
+    margin-top: 0.3px;
+    font-size: 2px;
+    text-decoration: none;
+    outline: none;
+    padding: 8% 30%;
+    color: transparent;
+    padding-bottom: 2px;
+    border-radius: 30px;
+    outline: none;
+    transition: 0.6s;
+    
+}
+/* =============== MAIN SECTIONS ============= */
 .sections{
     height: 100vh;
-    background: black;
+    background: linear-gradient(pink, gray);
     border-bottom: 20px solid orangered;
     background-attachment: fixed;
+    transition: 0.6s;
+    scroll-behavior: smooth;
 }
 
 .section-1{
     padding-top: 100px;
     color: #fff;
+    transition: 0.6s;
 }
+
 .sections:nth-child(2){
     background: blue;
+    height: 100vh;
 }
 
 .sections:nth-child(3){
     background: orange;
+    height: 100vh;
 }
 
 .sections:nth-child(4){
-    background: linear-gradient(pink, gray);
+    background: skyblue;
+    height: 100vh;
 }
+
 
 /* ========= TOGGLE NULL FOR DESKTOP ==========*/
 .menu-toggle{
@@ -98,13 +137,18 @@ header .nav-link{
 
 
 
-
-
 /* ================ MOBILE WIDTH ============= */
 @media(max-width: 768px){
+
     header{
-        padding: 40px 20px;
+        padding: 15px 20px;
+        background: #555;
     }
+    header .logo{
+        font-size: 25px;
+        border-top: 1.4px solid #ff4500;
+        border-bottom: 1.4px solid #fff;
+    }       
     header.sticky{
         padding: 15px 20px;
     }
@@ -118,13 +162,48 @@ header .nav-link{
     width: 40px;
     background: #ccc;
     line-height: 40px;
-    font-size: 30px;
+    font-size: 36px;
     text-align: center;
     cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 3px;
+    outline: none;
+}
+
+.section-1{
+    padding-top: 200px;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    white-space: nowrap;
+    overflow-y: scroll;
+    height: 100%;
 }
 
     .menu-toggle:before{
     content: '\f0c9';
     font-family: fontAwesome;
+}
+    .menu-toggle.active:before{
+    content: '\f00d';
+}
+
+.top-cards{
+    justify-content: center;
+    display: block;
+}
+.card a{
+    padding: 55px 68px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 550;
+}
+.card .min{
+    padding: 55px 100px;
+}
+.card .min2{
+    padding: 55px 110px;
+}
+.fa{
+    
 }
 }
